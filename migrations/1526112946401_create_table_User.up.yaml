@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "User"("name" text NOT NULL, "id" text NOT NULL, "channel_name"
+      text NOT NULL, "channel_id" text NOT NULL, "webhook_url" text NOT NULL, PRIMARY
+      KEY ("id") )
+  type: run_sql
+- args:
+    name: User
+  type: add_existing_table_or_view

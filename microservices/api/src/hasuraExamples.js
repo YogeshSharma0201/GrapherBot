@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var config = require('./config');
 var request = require('request');
+var passport = require('passport');
+
 
 router.route("/").get(function (req, res) {
   res.render("home");
@@ -99,5 +101,7 @@ router.route("/examples/filestore").get(function (req, res) {
 
   }
 })
+
+
 
 module.exports = router;

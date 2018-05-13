@@ -1,1 +1,4 @@
 .hasura
+node_modules
+.env
+microservices/api/src/package-lock.json
