@@ -1,6 +1,20 @@
-# base
+# GrapherBot
 
-A blank template to be used as a starting point to build projects on Hasura. A "project" is a "gittable" directory in the file system, which captures all the information regarding clusters, services and migrations. It can also be used to keep source code for custom services that you write.
+## How to get started
+### Development
+1) `$ cd /microservices/api/src`
+2) `$ cp sample.env .env`
+3)  Fill out the environment variables in .env file. You can get these variables from 
+    after creating a new app.
+4)  After creating the app enable incoming-webhook, also add a command `/gb` 
+    and give its link `domain.com/gb`. 
+5)  `$ npm install`
+6)  Install ngrok so as to tunnel localhost:8080 to https.
+7)  Run `$ npm start` to start the api on localhost:8080 
+    and tunnel it through ngrok by `./ngrok http 8080`
+8)  Use this tunnel link to set O-auth redirect link for 
+    slack app, this redirect link would be something like `https://7a09f0eb.ngrok.io/auth/slack/callback`
+ 
 
 ## Files and Directories
 

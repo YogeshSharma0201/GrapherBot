@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25233a32-e1aa-4b2f-b481-c8247f699593" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/microservices/api/k8s.yaml" afterPath="$PROJECT_DIR$/microservices/api/k8s.yaml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -86,12 +86,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="k8s.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="k8s.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/api/k8s.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="-67">
               <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="288">
+                <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                <folding>
+                  <marker date="1526216622918" expanded="true" signature="2441:2460" ph="h34-ambitious93-stg" />
+                  <marker date="1526216622918" expanded="true" signature="2470:2476" ph="hasura" />
+                  <marker date="1526216622918" expanded="true" signature="2492:2511" ph="h34-ambitious93-stg" />
+                  <marker date="1526216622918" expanded="true" signature="2514:2574" ph="config: &lt;2 keys&gt;" />
+                  <marker date="1526216622918" expanded="true" signature="2537:2552" ph="controller-conf" />
+                  <marker date="1526216622918" expanded="true" signature="2568:2574" ph="hasura" />
+                  <marker date="1526216622918" expanded="true" signature="2583:2587" ph="null" />
+                </folding>
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -101,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hasuraExamples.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/api/src/hasuraExamples.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -150,6 +161,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/microservices/api/src/.env" />
         <option value="$PROJECT_DIR$/microservices/api/k8s.yaml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -350,12 +362,12 @@
       <workItem from="1526063570272" duration="124000" />
       <workItem from="1526098408473" duration="13356000" />
       <workItem from="1526125012763" duration="13634000" />
-      <workItem from="1526208555657" duration="5202000" />
+      <workItem from="1526208555657" duration="7466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32391000" />
+    <option name="totallyTimeSpent" value="34655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="273" y="213" width="1303" height="780" extended-state="6" />
@@ -537,9 +549,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/api/k8s.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="-67">
           <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="288">
+            <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <folding>
+              <marker date="1526216622918" expanded="true" signature="2441:2460" ph="h34-ambitious93-stg" />
+              <marker date="1526216622918" expanded="true" signature="2470:2476" ph="hasura" />
+              <marker date="1526216622918" expanded="true" signature="2492:2511" ph="h34-ambitious93-stg" />
+              <marker date="1526216622918" expanded="true" signature="2514:2574" ph="config: &lt;2 keys&gt;" />
+              <marker date="1526216622918" expanded="true" signature="2537:2552" ph="controller-conf" />
+              <marker date="1526216622918" expanded="true" signature="2568:2574" ph="hasura" />
+              <marker date="1526216622918" expanded="true" signature="2583:2587" ph="null" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
