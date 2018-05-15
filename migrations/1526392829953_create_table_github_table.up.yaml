@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "github_table"("accessToken" text NOT NULL, "refreshToken" text
+      NOT NULL, "profile" text NOT NULL, "channel_id" text NOT NULL, PRIMARY KEY ("channel_id")
+      )
+  type: run_sql
+- args:
+    name: github_table
+  type: add_existing_table_or_view

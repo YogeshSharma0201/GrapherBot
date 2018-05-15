@@ -163,7 +163,7 @@ passport.use(new GitHubStrategy({
     },
     function(accessToken, refreshToken, profile, cb) {
         console.log(accessToken, refreshToken, profile);
-        cb(null, profile);
+        cb(null, accessToken);
     }
 ));
 
