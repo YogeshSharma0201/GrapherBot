@@ -10,6 +10,8 @@ const SlackStrategy = require('@aoberoi/passport-slack').default.Strategy;
 var fetchAction =  require('node-fetch');
 const { IncomingWebhook } = require('@slack/client');
 var https = require("https");
+var GitHubStrategy = require('passport-github').Strategy;
+
 
 require('dotenv').config();
 
@@ -34,7 +36,7 @@ let requestOptions = {
 //keep hasura cluster awake
 setInterval(function() {
     https.get("https://api.bacteriology62.hasura-app.io/");
-}, 180000);
+}, 300000);
 
 router.use(morgan('dev'));
 
@@ -155,6 +157,16 @@ passport.use(new SlackStrategy({
 
 }));
 
+passport.use(new GitHubStrategy({
+        clientID: process.env.GITHUB_CLIENT_ID,
+        clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    },
+    function(accessToken, refreshToken, profile, cb) {
+        console.log(accessToken, refreshToken, profile);
+        cb(null, profile);
+    }
+));
+
 // let redirectURL = `https://slack.com/oauth/authorize?client_id=${process.env.SLACK_CLIENT_ID}&scope=incoming-webhook`;
 
 app.get('/auth/slack/callback', passport.authenticate('slack', {failureRedirect: '/auth/slack' }),
@@ -171,11 +183,35 @@ app.get('/auth/slack/callback', passport.authenticate('slack', {failureRedirect:
             }
         });
         res.render("login_success");
-});
+    });
+
+app.get('/auth/github',
+    passport.authenticate('github'));
+
+app.get('/auth/github/callback',
+    passport.authenticate('github', { failureRedirect: '/auth/github' }),
+    function(req, res) {
+        // Successful authentication, redirect home.
+        res.render("github_success");
+    });
 
 app.post('/gb', function(req, res) {
-        res.status(200).send("Pong");
+        console.log(req);
+
+        var text = req.body.text;
+
+        switch(text) {
+            case 'login':
+            {
+                res.status(200).send(`Click this url to link your github account: https://3e0cff76.ngrok.io/auth/github/`);
+            }
+            default :
+            {
+                res.status(200).send('Hello');
+            }
+        }
 });
+
 
 app.use('/', hasuraExamplesRouter);
 
