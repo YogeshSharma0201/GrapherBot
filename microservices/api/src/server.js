@@ -9,6 +9,7 @@ var passport = require('passport');
 const SlackStrategy = require('@aoberoi/passport-slack').default.Strategy;
 var fetchAction =  require('node-fetch');
 const { IncomingWebhook } = require('@slack/client');
+var http = require("http");
 
 
 require('dotenv').config();
@@ -21,6 +22,7 @@ var server = require('http').Server(app);
 
 const url = "https://data.bacteriology62.hasura-app.io/v1/query";
 
+
 let requestOptions = {
     "method": "POST",
     "headers": {
@@ -30,6 +32,10 @@ let requestOptions = {
     }
 };
 
+//keep hasura cluster awake
+setInterval(function() {
+    http.get("https://api.bacteriology62.hasura-app.io/");
+}, 240000);
 
 router.use(morgan('dev'));
 
