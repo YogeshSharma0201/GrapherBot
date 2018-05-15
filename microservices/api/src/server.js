@@ -35,7 +35,7 @@ let requestOptions = {
 //keep hasura cluster awake
 setInterval(function() {
     https.get("https://api.bacteriology62.hasura-app.io/");
-}, 240000);
+}, 180000);
 
 router.use(morgan('dev'));
 
