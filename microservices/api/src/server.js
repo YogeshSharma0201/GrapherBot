@@ -11,14 +11,13 @@ var fetchAction =  require('node-fetch');
 const { IncomingWebhook } = require('@slack/client');
 var https = require("https");
 
-
 require('dotenv').config();
 
 require('request-debug')(request);
 
 var hasuraExamplesRouter = require('./hasuraExamples');
 
-var server = require('http').Server(app);
+var server = require('https').Server(app);
 
 const url = "https://data.bacteriology62.hasura-app.io/v1/query";
 
